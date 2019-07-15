@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4482639898782409188}
   - component: {fileID: 4482639898782409178}
   - component: {fileID: 161458270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   speed: 10
   padding: 1
   health: 200
+  deathClip: {fileID: 8300000, guid: 9ca26d5404bdb4640831aa6bbb66bc46, type: 3}
   projectileSpeed: 20
   shootPeriod: 0.05
   playerLaser: {fileID: 2511294592183143102, guid: f30d2678859aa814e9d2f006d4e4b464,
@@ -110,7 +111,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

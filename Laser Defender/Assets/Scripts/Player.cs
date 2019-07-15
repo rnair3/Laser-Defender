@@ -8,12 +8,16 @@ public class Player : MonoBehaviour
     [Header("Player")]
     [SerializeField] float speed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] int health = 200;
+    [SerializeField] int startHealth = 200;
+    int health;
+    [SerializeField] AudioClip deathClip;
+    [SerializeField] int lives = 3;
 
     [Header("Laser Properties")]
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float shootPeriod = 0.1f;
     [SerializeField] GameObject playerLaser;
+
 
     Coroutine shootCoroutine;
 
@@ -23,6 +27,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health = startHealth;
         SetBoundaries();
     }
 
@@ -79,16 +84,43 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
+        if (!damageDealer)
+        {
+            return;
+        }
         ProcessHit(damageDealer);
     }
 
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
-
+        damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            lives--;
+            health = startHealth;
+            if(lives < 0)
+            {
+                Death();
+            }
+            
         }
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathClip, Camera.main.transform.position);
+        FindObjectOfType<LevelManager>().LoadGameOver();
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    public int GetLives()
+    {
+        return lives;
     }
 }

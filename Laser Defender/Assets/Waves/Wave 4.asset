@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 3224436227863386802, guid: 74b24f8f6dba91f458159b609669c9ce, type: 3}
   path: {fileID: 3224804877549250383, guid: c342078f4d392d4419e9c04e43ec094e, type: 3}
-  timeBetweenSpawns: 0.4
+  timeBetweenSpawns: 0.5
   spawnFactor: 0.3
-  numberOfEnemies: 6
+  numberOfEnemies: 4
   moveSpeed: 6

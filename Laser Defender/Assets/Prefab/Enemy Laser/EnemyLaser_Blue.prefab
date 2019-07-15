@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6192769420256054455}
   - component: {fileID: 6192769420256054452}
   - component: {fileID: 1462730492584948856}
-  - component: {fileID: 1978333381144584035}
   - component: {fileID: 4816536691924139856}
-  m_Layer: 0
+  - component: {fileID: 5591662145925064964}
+  m_Layer: 11
   m_Name: EnemyLaser_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &1978333381144584035
+--- !u!114 &4816536691924139856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192769420256054453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede3c55abf29b58488c61c914eb58920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+--- !u!70 &5591662145925064964
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,18 +130,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.09, y: 0.54}
+  m_Size: {x: 0.18, y: 1.08}
   m_Direction: 0
---- !u!114 &4816536691924139856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192769420256054453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede3c55abf29b58488c61c914eb58920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100

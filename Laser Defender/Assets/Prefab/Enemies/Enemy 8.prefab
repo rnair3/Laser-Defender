@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 2914691722509001151}
   - component: {fileID: 45595580}
   - component: {fileID: 6966420981731893437}
-  m_Layer: 0
+  - component: {fileID: 406429338}
+  - component: {fileID: 406429339}
+  m_Layer: 9
   m_Name: Enemy 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,9 +124,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdce4178eb96a34d87b9fdaffb00d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shootCounter: 0
+  health: 300
+  scoreValue: 100
   minTimeBetweenShots: 0.2
-  maxTImeBetweenShots: 3
+  maxTimeBetweenShots: 5
   laser: {fileID: 6192769420256054453, guid: c3ebdfdbae5a33541a39abe8bbba9fa7, type: 3}
   projectileSpeed: 10
+  explosion: {fileID: 1953258450285131114, guid: d73dae96d8cf78f4a9a5a549af107ee8,
+    type: 3}
+  durationVFX: 1
+  shoot: {fileID: 8300000, guid: 3a9a5912e0ee8044c9de65589cc7dc55, type: 3}
+  deathClip: {fileID: 8300000, guid: 948328722daabd74abb54604eb150b39, type: 3}
+--- !u!50 &406429338
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224436227863386802}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &406429339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224436227863386802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede3c55abf29b58488c61c914eb58920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50

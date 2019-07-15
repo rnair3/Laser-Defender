@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wave 8
   m_EditorClassIdentifier: 
   enemy: {fileID: 3224436227863386802, guid: acc224d905f405a419a14ffe9b194124, type: 3}
-  path: {fileID: 3224804877549250383, guid: e472a54574a293b43a6a5b3553dacfad, type: 3}
+  path: {fileID: 3224804877549250383, guid: 8e81050a577b04a4882304c332b49c6b, type: 3}
   timeBetweenSpawns: 0.3
   spawnFactor: 0.3
-  numberOfEnemies: 7
-  moveSpeed: 10
+  numberOfEnemies: 1
+  moveSpeed: 12
