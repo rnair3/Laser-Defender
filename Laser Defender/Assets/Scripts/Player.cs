@@ -119,8 +119,18 @@ public class Player : MonoBehaviour
         return health;
     }
 
+    public void SetHealth(int value)
+    {
+        health = value;
+    }
+
     public int GetLives()
     {
         return lives;
+    }
+
+    public void SetLives(int lives)
+    {
+        this.lives = lives;
     }
 }
